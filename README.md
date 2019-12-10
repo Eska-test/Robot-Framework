@@ -5,7 +5,7 @@ Hello and thank you for reviewing my submission.
 I have automated test scenarios that I have included in Excel with Robot Framework, a really usefull framework on top of Selenium and based on Python.
 Below are steps you need to take to run my scripts from your computer.
 
-1. Download all the files from Git, and extract it in C:/
+1. Download all the files from Git, and extract it in C:\
     The path should look like this: C:\test
     The .bat files are used to run the scripts, you can save them anywhere.
     
