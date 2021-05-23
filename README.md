@@ -23,7 +23,7 @@ Below are steps you need to take to run my scripts from your computer.
 https://www.python.org/downloads/
 3. During python instalation remember to add it to PATH, and install PIP. If you dont have PIP you need to download it separately from https://pypi.org/project/pip/, and add it to PATH.
 4. After you have installed Python + PIP, open Command Prompt: Start -> cmd.
-5. Type in: pip install robotframework-selenium2library
+5. Type in: pip install robotframework-seleniumlibrary
    If you are behind proxy, you need to add --proxy host:port
 6. The tests are prepared for chrome browser, so you will need a chrome webdriver from here:
 https://sites.google.com/a/chromium.org/chromedriver/downloads
