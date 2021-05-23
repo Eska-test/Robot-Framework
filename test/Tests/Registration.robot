@@ -3,8 +3,8 @@ Documentation  On register page verify register process and validations.
 
 Resource  ../Resources/Register Page.robot
 Resource  ../Resources/Common.robot
-Test Setup  Start Test
-Test Teardown  End Test
+Test Setup    Start Test
+Test Teardown    End Test
 
 *** Variables ***
 ${BROWSER} =  chrome
@@ -61,6 +61,29 @@ Register user properly
     Input Password into Password field
     Click Complete Registration
     Verify Registration is complete
+
+Go to register page
+    go to    ${start url}
+
+Click Next Step
+    click element    ${next_step}
+
+Verify Full Name error
+    wait until element is enabled    css=#name-error
+
+Input wrong phone number
+    run keyword and continue on failure    input text    ${phone_number}    $dsa
+    element should not contain    ${phone_number}    $dsa
+
+Input wrong date of birth
+    run keyword and continue on failure  input text    ${birth_date}    $dsa
+    element should not contain    ${birth_date}    $dsa
+
+Input wrong dates of birth
+    input text    ${birth_date}    32121995
+    textfield should contain    ${birth_date}    31/1m/yyyy
+    input text    ${birth_date}    01131995
+    textfield should contain    ${birth_date}    01/11/2099
 
 
 

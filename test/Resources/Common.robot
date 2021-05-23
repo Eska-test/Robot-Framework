@@ -1,18 +1,17 @@
 *** Settings ***
-Library  Selenium2Library
+Library  SeleniumLibrary
 
 
 *** Keywords ***
-
 Go to page
-     go to ${START_URL}
+     Go To    ${START_URL}
 
 Start Test
-    set selenium speed  0.3s
-    Open Browser  about:blank  ${BROWSER}
-    maximize browser window
+    Set Selenium Speed    0.3s
+    Open Browser    about:blank    ${BROWSER}
+    Maximize Browser Window
 
 End Test
-    sleep  5s
-    close browser
+    Sleep    5s
+    Close Browser
 
